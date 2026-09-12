@@ -13,7 +13,7 @@ export const textMsgController = async (req, res) => {
       timestamp: Date.now(),
       isImage: false,
     });
-    const response = await axios.post("http://127.0.0.1:8000/post", {
+    const response = await axios.post("https://llm-lime-two.vercel.app/post", {
       messages: prompt
     });
     const aiReply = response.data.reply;
